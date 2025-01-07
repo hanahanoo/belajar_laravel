@@ -31,6 +31,15 @@ route::get('/contact', function (){
     return "Selamat Datang Di Halaman Contact";
 });
 
+
+route::get('/siswa', function(){
+
+    $data_siswa = ['hana', 'dhea', 'nabilla'];
+
+    return view('tampil', compact('data_siswa'));
+});
+
+
 route::get('/tes/{nama2}/{tempat}/{jk}/{agama}/{alamat}', function($nama,$tmptlahir,$jk,$agama,$alamat){
     return "Nama : ".$nama. "<br>".
            "Tempat Lahir : ".$tmptlahir. "<br>".
